@@ -27,6 +27,12 @@ def ping():
         if match:
             print "\n\033[1;32m[+] SIM Activation Date and Time:\033[1;m", match.group().split('red>')[1][:-7]
             pass
+        match = search (r'aadhaarNumber:-<font color=red>[^<]*</font>', html)
+        if match:
+            print "\n\033[1;32m[+] Aadhar Number:\033[1;m", match.group().split('red>')[1][:-7]
+            pass
+        else:
+            pass
     else:
         ping()
 print "\t\tUltimate Hackers : teamultimate.in"
