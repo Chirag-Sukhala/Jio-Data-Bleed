@@ -5,7 +5,7 @@ def ping():
     data = urlencode({"Mobile":number,"submit":"Show"})
     result = urlopen("http://magicapk.com/jiosimdetail.php", data)
     html = result.read()
-    find = search (r'@', html)
+    find = search (r'\+91', html)
     if find:
         match = search (r'First Name:-<b><font color=red>[^<]*</font>', html)
         if match:
